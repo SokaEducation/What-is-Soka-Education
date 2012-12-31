@@ -1,0 +1,468 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Font-face declaration
+   ========================================================================== */
+
+@font-face {
+    font-family: 'pf_din_text_comp_probold';
+    src: url('fonts/parachute_-_pfdintextcomppro-bold-webfont.eot');
+    src: url('fonts/parachute_-_pfdintextcomppro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/parachute_-_pfdintextcomppro-bold-webfont.woff') format('woff'),
+         url('fonts/parachute_-_pfdintextcomppro-bold-webfont.ttf') format('truetype'),
+         url('fonts/parachute_-_pfdintextcomppro-bold-webfont.svg#pf_din_text_comp_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'news_706regular';
+    src: url('fonts/news706bt-romanc-webfont.eot');
+    src: url('fonts/news706bt-romanc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/news706bt-romanc-webfont.woff') format('woff'),
+         url('fonts/news706bt-romanc-webfont.ttf') format('truetype'),
+         url('fonts/news706bt-romanc-webfont.svg#news_706regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pf_din_text_comp_pro_lightRg';
+    src: url('fonts/parachute_-_pfdintextcomppro-light-webfont.eot');
+    src: url('fonts/parachute_-_pfdintextcomppro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/parachute_-_pfdintextcomppro-light-webfont.woff') format('woff'),
+         url('fonts/parachute_-_pfdintextcomppro-light-webfont.ttf') format('truetype'),
+         url('fonts/parachute_-_pfdintextcomppro-light-webfont.svg#pf_din_text_comp_pro_lightRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'pf_din_text_comp_probold', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: black;
+        line-height: 0.9;
+        margin: 1rem 0;
+    }
+
+    body {
+        font-family: 'news_706regular', Georgia, serif;
+        color: hsl(0, 0%, 17%);
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0 auto;
+        background: white;
+        position: relative;
+    }
+    i, b{
+      text-decoration: none;
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .nav,
+    .nav a{
+        font-family: 'pf_din_text_comp_pro_lightRg',  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 1.5em; 
+        text-decoration: none; }
+    .nav li{ list-style: none; display: inline-block; padding-right: .5em;}
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+   .col-full {
+        max-width: 980px;
+        margin: 0 auto;
+   }
+
+   .full-width {
+        width: 100%;
+   }
+   .fr { float: right; }
+   .fl { float: left; }
+   .text-left{ text-align: left; }
+   .text-center{ text-align: center; }
+   .text-right{ text-align: right; }
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+   .top {
+        padding-top: .9em;
+        padding-bottom: 1.2em;
+        background: #fff;
+   }
+
+   .logo {
+        padding-left:0em;
+   }
+
+   .header {
+
+   }
+
+   .header h1 {
+        width: 99%;
+        margin: 0 auto; 
+   }
+
+   .sub-header {
+        background: #7081EB;
+
+   }
+
+/* ==========================================================================
+   State
+   ========================================================================== */
+   ul.nav{ margin: .6em 0; }
+   #navigation{right: 1rem; position: absolute; top:0;}
+   #navigation li{ display: inline; }
+   #navigation li a:hover { color: #7081EB; }
+   .header .nav a {font-size: 1em; color: #2F353E; margin-left: .5em; font-weight: normal;}
+   .cue h1 { 
+        font-size: 4em; 
+        color: white;
+        padding-top: 1.7em;
+        margin-top:0;
+    }
+    .cue h1 b{
+      font-size:2.2em;
+    }    
+    .cue h2{
+      color: #FEF7CD;
+      text-transform: none;
+      font-family: 'news_706regular', Georgia, serif;
+      font-size: 2em;
+      font-weight: normal;
+    }
+    .floatwrapper{
+      position: absolute;
+    }
+    .blueGrad{
+      background: #2854a5; /* Old browsers */
+      background: -moz-linear-gradient(top,  #2854a5 0%, #588dca 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2854a5), color-stop(100%,#588dca)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #2854a5 0%,#588dca 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #2854a5 0%,#588dca 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #2854a5 0%,#588dca 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #2854a5 0%,#588dca 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2854a5', endColorstr='#588dca',GradientType=0 ); /* IE6-9 */
+      height: 610px;
+      width: 100%;
+    }
+    .lion{
+      position: absolute;
+      right: 0; 
+      height: 610px;
+      width: 460px;
+      background: url('../img/lion-blue-back.jpg') no-repeat right center;
+    }
+    .clouds{
+      height: 610px;
+      width: 400px;
+      background: url('../img/cloud-blue-back.jpg') no-repeat left center;
+    }
+    .meaning{
+
+    }
+    .meaning h2{
+    }
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
