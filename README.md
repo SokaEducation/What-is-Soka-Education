@@ -8,9 +8,7 @@ This project came out of a job hiring project from [Good.is](http://www.good.is)
 I have created a specific CFG landing page here:(http://www.cgraffiti.com/whatissokaeducation/cfg.html)
 
 ## In the wild
-~~**[WhatIsSokaEducation.com](http://www.whatissokaeducation.com) is live.**~~ 
-
-12/30/12 10:55pm The DNS is still propagating. In the meanwhile, visit: [here](http://www.cgraffiti.com/whatissokaeducation).
+**[WhatIsSokaEducation.com](http://www.whatissokaeducation.com) is live.**
 
 ## More information
 
