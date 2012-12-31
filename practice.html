@@ -15,8 +15,147 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript">
+          var myHighSchool = new google.maps.LatLng(42.28695,-71.23132);
+          var myHighschoolMarker = null;
+            
+            // FIRST create an info window function.
+            function showMeInfo(map) {
+              //FIRST Let's create a series of string variables that   
+              //contain the HTML content we want displayed for each marker
+
+              var myHighSchoolString = '<p>This is where I went to High School!</p>';
+
+
+             //SECOND create info window objects using the InfoWindow method
+             //the content should be one of the string variables you created FIRST
+             var myHighSchoolInfoWindow = new google.maps.InfoWindow({
+                content: myHighSchoolString
+             });
+
+             //THIRD, Let’s add a click event to each of the markers so that
+             //the info window is displayed when you click the marker
+
+              google.maps.event.addListener(myHighschoolMarker, 'click', function() {
+               myHighSchoolInfoWindow.open(map,myHighschoolMarker);
+             });
+
+            }
+
+            function showMeDaMappy() {
+              //FIRST create the variable of map options
+              
+              var styles = [
+              {
+                "featureType": "administrative.province",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "administrative.locality",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "administrative.neighborhood",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              }, {
+                "featureType": "administrative.locality",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "road",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "water",
+                "stylers": [
+                  { "visibility": "simplified" }
+                ]
+              },{
+                "featureType": "administrative.country",
+                "elementType": "labels.text",
+                "stylers": [
+                  { }
+                ]
+              },{
+                "featureType": "landscape",
+                "stylers": [
+                  { "visibility": "on" },
+                  { "color": "#d8b163" }
+                ]
+              },{
+                "featureType": "poi",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "road",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "transit",
+                "stylers": [
+                  { "visibility": "off" }
+                ]
+              },{
+                "featureType": "water",
+                "stylers": [
+                  { "color": "#2854a5" }
+                ]
+              }
+          ];
+
+              var mapOptions = {
+                //play around with this number as needed
+                zoom: 2,
+                //let’s center our map on one of our coordinate sets
+                center: myHighSchool,
+                disableDefaultUI: true,
+                panControl: true,
+                panControlOptions: {
+                    position: google.maps.ControlPosition.BOTTOM_CENTER
+                },
+                zoomControl: false,
+                scrollwheel: false,
+                scaleControl: false,
+                //try changing ROADMAP to SATELLITE, TERRAIN, or HYBRID
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: styles,
+
+              }
+
+              
+
+              //SECOND create a new map object with the options we just set
+              //target is the id of the element where the map should load
+              var myMap = new google.maps.Map(document.getElementById('hero'),mapOptions);
+
+              //THIRD we add marker objects to be displayed on the map
+              myHighschoolMarker = new google.maps.Marker(
+                {
+                  //for position we use one of our coordinate sets from above
+                  position: myHighSchool,
+                  //map should link to our map variable
+                  map: myMap,
+                  //title wont actually display anywhere
+                  title: 'Needham High School (Needham, Massachusetts)'
+                }
+               );
+
+
+              showMeInfo(myMap);
+
+            }
+        </script>
     </head>
-    <body>
+    <body class="practice" onload="showMeDaMappy()">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -32,7 +171,8 @@
                         <li><a href="#">Overview</a></li>
                         <li><a href="#">Meaning</a></li>
                         <li><a href="#">Roots</a></li>
-                        <li><a href="#">In Practice</a></li>
+                        <li><a href="#">Context</a></li>
+                        <li><a href="#">Institutions</a></li>
                     </ul>
 
                    <!-- <a href="#" class="getinvolved">Get Involved <b>></b></a> -->
@@ -40,9 +180,9 @@
             </div>
             <div class="content">
                 <div class="blueGrad">
-                    <div class="clouds fl"></div>
-                    <div class="lion fr"></div>
-                    
+                    <div id="hero" class="blueGrad">
+                        
+                    </div>
                     <div class="cue col-full">
                         <div class="floatwrapper">
                             <h1> 

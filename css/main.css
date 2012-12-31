@@ -239,6 +239,12 @@ textarea {
       font-size: 2em;
       font-weight: normal;
     }
+
+    .practice .cue h2{
+      background:rgba(40, 84, 165, .7);
+      padding:.1em;
+      display: inline
+    }
     .floatwrapper{
       position: absolute;
     }
@@ -254,10 +260,15 @@ textarea {
       height: 610px;
       width: 100%;
     }
+    .lion, .lion404, .clouds, .practice #hero{
+      height: 610px;
+    }
+    #hero{
+      position:absolute;
+    }
     .lion{
       position: absolute;
       right: 0; 
-      height: 610px;
       width: 460px;
       background: url('../img/lion-blue-back.jpg') no-repeat right center;
     }
@@ -265,12 +276,10 @@ textarea {
       position: absolute;
       right: 0; 
       padding-left:20%;
-      height: 610px;
       width: 186px;
       background: url('../img/404.png') no-repeat left center;
     }
     .clouds{
-      height: 610px;
       width: 400px;
       background: url('../img/cloud-blue-back.jpg') no-repeat left center;
     }
