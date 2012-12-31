@@ -16,3 +16,7 @@ The exhibition content can be found at [Soka University of America](http://soka.
 ## Contributing
 
 Thank you to the SESRP, Seon Mi Jin, Florance Minowa, and Eric Reker. Flo can be found at [@flomino](https://twitter.com/flomino) and [flominowa.com](http://www.flominowa.com).
+
+## Licensing
+
+Fonts are licensed from [Myfonts](http://myfonts.com) to Leonard Bogdonoff.
