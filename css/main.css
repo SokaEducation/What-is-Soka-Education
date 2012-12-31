@@ -9,7 +9,7 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+*{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 html,
 button,
 input,
@@ -169,6 +169,25 @@ textarea {
         font-size: 1.5em; 
         text-decoration: none; }
     .nav li{ list-style: none; display: inline-block; padding-right: .5em;}
+    blockquote p{border-left: 1px dashed #999;
+      padding-left: 1em;}
+    blockquote {
+      margin: 1em 2em;
+      padding-left: 1em; }
+    blockquote p:first-letter {
+      float: left;
+      margin: -.1em .3em .1em 0;
+      font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+      font-size: 3em;
+      font-weight: bold; }
+    blockquote p:first-line {
+      font-variant: small-caps; font-size: 2em; }
+    blockquote footer {
+      font-family: 'pf_din_text_comp_pro_lightRg',  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size:2em;
+      font-style: italic;
+      padding-right:8.33%;
+    }
 /* ==========================================================================
    Layout
    ========================================================================== */
@@ -177,44 +196,54 @@ textarea {
         max-width: 980px;
         margin: 0 auto;
    }
-
    .full-width {
         width: 100%;
    }
    .fr { float: right; }
    .fl { float: left; }
+   .inline{ display: inline;}
+   .inline-block{ display: inline-block;}
    .text-left{ text-align: left; }
    .text-center{ text-align: center; }
    .text-right{ text-align: right; }
+   .twelve{ width: 100%; }
+   .eleven{ width: 91.66%;}
+   .ten{ width: 83.33%; }
+   .nine{ width: 74.99% }
+   .eight{ width: 66.66%; }
+   .seven{ width: 58.33%;} 
+   .six{ width: 50%; }
+   .five{ width: 41.66% }
+   .four{ width: 33.33%; }
+   .three{ width: 24.99%;}
+   .two{ width: 16.66%; }
+   .one{ width: 8.33%; }
+   .column{float: left; padding: 0 15px;}
+   .clear-rt{ clear:right;}
+   .clear-lt{ clear: left;}
+   .clear-bt{ clear: both;}
 
 /* ==========================================================================
    Module
    ========================================================================== */
-
+   .col-full{padding-left:1.69%; padding-right: 1.69%;}
    .top {
         padding-top: .9em;
         padding-bottom: 1.2em;
         background: #fff;
    }
+   .logo { padding-left:0em;}
+   .header {}
 
-   .logo {
-        padding-left:0em;
-   }
+   .header h1 { width: 99%; margin: 0 auto; }
 
-   .header {
-
-   }
-
-   .header h1 {
-        width: 99%;
-        margin: 0 auto; 
-   }
-
-   .sub-header {
-        background: #7081EB;
-
-   }
-
+   .sub-header { background: #7081EB; }
+   .important{
+      border-radius: 40px 5px 40px 5px; 
+      -moz-border-radius: 40px 5px 40px 5px; 
+      -webkit-border-radius: 40px 5px 40px 5px; 
+      border: 1px ridge #FFFFFF;
+    }
 /* ==========================================================================
    State
    ========================================================================== */
@@ -257,9 +286,9 @@ textarea {
       background: -ms-linear-gradient(top,  #2854a5 0%,#588dca 100%); /* IE10+ */
       background: linear-gradient(to bottom,  #2854a5 0%,#588dca 100%); /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2854a5', endColorstr='#588dca',GradientType=0 ); /* IE6-9 */
-      height: 610px;
       width: 100%;
     }
+    .slidehi{height: 610px;}
     .lion, .lion404, .clouds, .practice #hero{
       height: 610px;
     }
@@ -283,8 +312,11 @@ textarea {
       width: 400px;
       background: url('../img/cloud-blue-back.jpg') no-repeat left center;
     }
+    .whatis .rap{ 
+      padding-top:35%;
+      padding-bottom: 35%;
+    }
     .meaning{
-
     }
     .meaning h2{
     }
@@ -292,7 +324,31 @@ textarea {
    Theme
    ========================================================================== */
 
+   .meaning .kanji h3{
+    font-size: 9.9em;
+    line-height: 1.1em;
+    font-family: serif;
+    color: #F3DC1B;
+    text-shadow: -3px 6px 0px #653404, 3px 12px 55px #83B8E0;
+   }
+   .meaning strong{  text-transform: uppercase;}
+   .meaning p{ color: #FEF7CD; }
+   .meaning p.important{
+    font-size: 1.4em;
+    line-height: 1.7em;
+    padding: 15px 15px 12px;
 
+    color: #FEF7CD;
+    border-color: rgba(255, 255, 10, 0.2);
+    background: rgba(255, 255, 180, 0.1);
+    -webkit-box-shadow: 0px 0px 35px 15px rgba(255, 255, 180, 0);
+    -moz-box-shadow: 0px 0px 35px 15px rgba(255, 255, 180, 0);
+    box-shadow: 0px 0px 35px 15px rgba(255, 255, 180, 0);
+  }
+   .meaning .rap{
+    margin-top:30%;
+    padding-bottom: 65%;
+   }
 
 /* ==========================================================================
    Helper classes
