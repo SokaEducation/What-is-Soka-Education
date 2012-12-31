@@ -261,6 +261,14 @@ textarea {
       width: 460px;
       background: url('../img/lion-blue-back.jpg') no-repeat right center;
     }
+    .lion404{
+      position: absolute;
+      right: 0; 
+      padding-left:20%;
+      height: 610px;
+      width: 186px;
+      background: url('../img/404.png') no-repeat left center;
+    }
     .clouds{
       height: 610px;
       width: 400px;
