@@ -432,9 +432,12 @@ textarea {
     .isvalue h3{ font-size: 4em;}
     .isvalue p{ font-size: 1.2em; text-indent: 2em;} 
     .isvalue ul{ list-style: none;}
-    .isvalue li{ margin-bottom: 1em; clear: both;}
+    .isvalue li{ margin-bottom: 1.5em; clear: both;}
     .isvalue li:last-child::first-letter{ margin-bottom: 1em; }
     .isvalue ul {padding-left: 0; }
+    .makivalue h3{ font-size: 2em;}
+    .makivalue h3, 
+    .makivalue p{ color: #3B3B3B;}
 ===============================================================
    Theme
    ========================================================================== */
