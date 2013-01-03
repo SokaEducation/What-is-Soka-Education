@@ -169,12 +169,14 @@ textarea {
         font-size: 1.5em; 
         text-decoration: none; }
     .nav li{ list-style: none; display: inline-block; padding-right: .5em;}
-    blockquote p{border-left: 1px dashed #999;
+    blockquote p{ border-left: 1px dashed #999;
       padding-left: 1em;}
     blockquote {
       margin: 1em 2em;
       padding-left: 1em; }
-    blockquote p:first-letter {
+    blockquote p:first-letter,
+    blockquote li:first-letter
+     {
       float: left;
       margin: -.1em .3em .1em 0;
       font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
@@ -183,7 +185,6 @@ textarea {
     blockquote p:first-line {
       font-variant: small-caps; font-size: 2em; }
     blockquote footer {
-      font-family: 'pf_din_text_comp_pro_lightRg',  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size:2em;
       font-style: italic;
       padding-right:8.33%;
@@ -206,22 +207,34 @@ textarea {
    .text-left{ text-align: left; }
    .text-center{ text-align: center; }
    .text-right{ text-align: right; }
-   .twelve{ width: 100%; }
-   .eleven{ width: 91.66%;}
-   .ten{ width: 83.33%; }
-   .nine{ width: 74.99% }
-   .eight{ width: 66.66%; }
-   .seven{ width: 58.33%;} 
-   .six{ width: 50%; }
-   .five{ width: 41.66% }
-   .four{ width: 33.33%; }
-   .three{ width: 24.99%;}
-   .two{ width: 16.66%; }
-   .one{ width: 8.33%; }
+   .twelve{ max-width: 100%; }
+   .eleven{ max-width: 91.66%;}
+   .ten{ max-width: 83.33%; }
+   .nine{ max-width: 74.99% }
+   .eight{ max-width: 66.66%; }
+   .seven{ max-width: 58.33%;} 
+   .six{ max-width: 50%; }
+   .five{ max-width: 41.66% }
+   .four{ max-width: 33.33%; }
+   .three{ max-width: 24.99%;}
+   .two{ max-width: 16.66%; }
+   .one{ max-width: 8.33%; }
    .column{float: left; padding: 0 15px;}
    .clear-rt{ clear:right;}
    .clear-lt{ clear: left;}
    .clear-bt{ clear: both;}
+   .two-col{
+      -moz-column-count: 2;
+       -moz-column-gap: 1.5em;
+       -webkit-column-count: 2;
+       -webkit-column-gap : 1.5em;
+       -moz-column-rule-color:  #ccc;
+       -moz-column-rule-style:  dotted;
+       -moz-column-rule-width:  1px;
+       -webkit-column-rule-color:  #ccc;
+       -webkit-column-rule-style: dotted ;
+       -webkit-column-rule-width:  1px;
+   }
 
 /* ==========================================================================
    Module
@@ -247,13 +260,14 @@ textarea {
     hr{
       width: 100%;
     }
+    .ltheadfont{ font-family: 'pf_din_text_comp_pro_lightRg',  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;}
 /* ==========================================================================
    State
    ========================================================================== */
    ul.nav{ margin: .6em 0; }
    #navigation{right: 1rem; position: absolute; top:0;}
    #navigation li{ display: inline; }
-   #navigation li a:hover { color: #7081EB; }
+   #navigation li a:hover { color: #2854a5; }
    .header .nav a {font-size: 1em; color: #2F353E; margin-left: .5em; font-weight: normal;}
    .cue h1 { 
         font-size: 4em; 
@@ -280,7 +294,7 @@ textarea {
     .floatwrapper{
       position: absolute;
     }
-    .blueGrad{
+    .Grad{
       background: #2854a5; /* Old browsers */
       background: -moz-linear-gradient(top,  #2854a5 0%, #588dca 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2854a5), color-stop(100%,#588dca)); /* Chrome,Safari4+ */
@@ -319,8 +333,109 @@ textarea {
       padding-top:35%;
       padding-bottom: 35%;
     }
+    .makiPort img{
+      max-width: auto;
+      max-height: 105%;
+      zoom: 1;
+      padding-right: 1.5em;
+    }
+    .pageBorder{
 
-/* ==========================================================================
+    }
+    .fanBorder{background:url('../img/japaneseFan.gif');
+    min-height: 3em;width:100%;}    
+    .purpBorder{ min-height: 3em;width:100%;}
+    .sokaRoots{ background: #d9dfc2; }
+    .purpBorder .fans{
+      height: 3em;
+      background: url('../img/rootpat.png') no-repeat right top;
+      background-size: 230px;}
+    .roots #navigation li a:hover { color: #642f80; }
+    .roots .Grad{
+      background: #642f80; /* Old browsers */
+      background: -moz-linear-gradient(top,  #642f80 0%, #53276a 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#642f80), color-stop(100%,#53276a)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #642f80 0%,#53276a 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #642f80 0%,#53276a 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #642f80 0%,#53276a 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #642f80 0%,#53276a 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#642f80', endColorstr='#53276a',GradientType=0 ); /* IE6-9 */
+      width: 100%;
+    }
+    .roots  .lion{
+      position: absolute;
+      right: 0; 
+      width: 610px;
+      background: url('../img/rootpat.png') no-repeat right center;
+    }
+    .sokaRoots .miliary{
+      padding-bottom:10%;
+    }
+    .sokaRoots .sokaEduRoots{
+      padding-top:5%;
+      padding-bottom: 2%;
+    }
+    .sokaRoots .military > p:first-letter,
+    .sokaRoots .sokaEduRoots p:first-letter{
+      float: left;
+      font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+      font-weight: bold; 
+    }
+    .sokaRoots .military > p:first-letter{
+      margin: -.1em .6em 0em 0;
+      font-size: 3em;
+    }
+    .sokaRoots .sokaEduRoots p:first-letter{
+      font-size:3.8em;
+      margin: -.1em .65em 0em 0;
+    }
+    .sokaRoots h3{
+      font-size: 1.5em;
+    }
+    .sokaRoots p{
+      font-size: 1.05em;
+    }
+    .people{
+      background: url('../img/makiguchiClass.jpg') no-repeat #642f80 center center;
+      background-size: 100%;
+      min-height: 100%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+    .people h3{ 
+      margin-left: 33%; 
+      color: white; 
+      font-size: 4em; 
+      opacity: 1; 
+      text-shadow: 3px 4px 5px #222, 3px 12px 55px #83B8E0;
+    }
+    .people .rap{
+      width:66%;
+      margin-left: 33%;
+      background: white /* Old browsers */;
+      background: rgba(255, 255, 255, 0.7);
+      padding: .5em 1.2em;
+      border-radius: 5px 30px 5px 30px;
+
+    }
+    .people p{
+      font-size: 1.2em;
+    }
+    .whatvalue{ background:#d9dfc2; }
+    .makivalue{ background:#b3b39d; padding-left: 2%; padding-right: 2%; }
+    .makivalue, .isvalue{padding-top: 15%; padding-bottom: 15%;}
+    .makivalue #valueSystem{ width: 100%; }
+    .makivalue .valueSystem ul{  }
+    .makivalue .valueSystem ul li{ list-style: none; }
+    .makivalue .valueSystem .positive{  }
+    .makivalue .valueSystem .negative{  }
+    .isvalue h3{ font-size: 4em;}
+    .isvalue p{ font-size: 1.2em; text-indent: 2em;} 
+    .isvalue ul{ list-style: none;}
+    .isvalue li{ margin-bottom: 1em; clear: both;}
+    .isvalue li:last-child::first-letter{ margin-bottom: 1em; }
+    .isvalue ul {padding-left: 0; }
+===============================================================
    Theme
    ========================================================================== */
    .meaning h3.first{ color:#eee; font-size: 2.6em; border-bottom: 1px solid white;}
@@ -352,7 +467,6 @@ textarea {
    .meaning hr{margin-top: 26em;}
    .tooltip:hover:before { 
      position: absolute;
-    font-family: 'pf_din_text_comp_pro_lightRg', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 1em;
     content: attr(data-tooltip);
