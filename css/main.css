@@ -458,7 +458,7 @@ textarea {
     .practicalform p:first-child{ margin-top:0; }
     .practicalform p{font-size: 1.2em; text-indent: 1.5em;}
     .practicalform{
-      padding-top: 5%;
+      padding-top: 15%;
       padding-bottom: 5%;
       background: url('../img/makiClassTog.jpg') no-repeat #642f80  center top;
       background-size:100%;
@@ -477,10 +477,10 @@ textarea {
 
     }
 
-===============================================================
+  /*===============================================================
    Theme
    ========================================================================== */
-   .meaning h3.first{ color:#eee; font-size: 2.6em; border-bottom: 1px solid white;}
+   .meaning h3.first{ color:#eee; font-size: 2.6em; }
    .meaning .kanji h3{
     font-size: 9.9em;
      line-height: 1.1em;
@@ -488,13 +488,22 @@ textarea {
      color: #F3DC1B;
      text-shadow: -3px 6px 0px #653404, 3px 12px 55px #83B8E0;
    }
+   .meaning .two-col p{margin-top:0; font-size: 1.1em;}
+   .meaning p {margin-top: 2em;}
    .meaning strong{  text-transform: uppercase;}
-   .meaning p{ color: #FEF7CD; }
+   .meaning p{ color: #FEF7CD; text-indent: 2em; }
+   .meaning .first p:first-child{text-indent:0em;}
+    .meaning .first p:first-child:first-letter{
+      float: left;
+      font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+      font-weight: bold; 
+      margin: -.1em .5em 0em 0;
+      font-size: 3em;
+    }
    .meaning p.important{
-    font-size: 1.4em;
-    line-height: 1.7em;
+    font-size: 1.2em;
+    line-height: 1.em;
     padding: 15px 15px 12px;
-
     color: #FEF7CD;
     border-color: rgba(255, 255, 10, 0.2);
     background: rgba(255, 255, 180, 0.1);
@@ -506,7 +515,6 @@ textarea {
     padding-top: 30%;
     padding-bottom: 30%;
    }
-   .meaning hr{margin-top: 26em;}
    .tooltip:hover:before { 
      position: absolute;
     text-transform: uppercase;
