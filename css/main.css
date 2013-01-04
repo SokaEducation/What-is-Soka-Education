@@ -178,7 +178,7 @@ textarea {
     blockquote li:first-letter
      {
       float: left;
-      margin: -.1em .3em .1em 0;
+      margin: -.2em .3em .1em 0;
       font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
       font-size: 3em;
       font-weight: bold; }
@@ -235,7 +235,15 @@ textarea {
        -webkit-column-rule-style: dotted ;
        -webkit-column-rule-width:  1px;
    }
-
+   .transTextBox{
+      background: white /* Old browsers */;
+      background: rgba(255, 255, 255, 0.7);
+      padding: .5em 1.2em;
+      border-radius: 5px 30px 5px 30px;
+    }
+    .headSha{
+      text-shadow: 3px 4px 5px #222, 3px 12px 55px #83B8E0;
+    }
 /* ==========================================================================
    Module
    ========================================================================== */
@@ -335,7 +343,7 @@ textarea {
     }
     .makiPort img{
       max-width: auto;
-      max-height: 105%;
+      max-height: 120%;
       zoom: 1;
       padding-right: 1.5em;
     }
@@ -343,8 +351,8 @@ textarea {
 
     }
     .fanBorder{background:url('../img/japaneseFan.gif');
-    min-height: 3em;width:100%;}    
-    .purpBorder{ min-height: 3em;width:100%;}
+    min-height: 2em;width:100%; padding-top: 5%;}    
+    .fanRap{padding-top:1%; background: #642f80;}
     .sokaRoots{ background: #d9dfc2; }
     .purpBorder .fans{
       height: 3em;
@@ -372,9 +380,10 @@ textarea {
       padding-bottom:10%;
     }
     .sokaRoots .sokaEduRoots{
-      padding-top:5%;
+      padding-top:7%;
       padding-bottom: 2%;
     }
+    .sokaRoots h3{ color: #2B2B2B;}
     .sokaRoots .military > p:first-letter,
     .sokaRoots .sokaEduRoots p:first-letter{
       float: left;
@@ -396,7 +405,7 @@ textarea {
       font-size: 1.05em;
     }
     .people{
-      background: url('../img/makiguchiClass.jpg') no-repeat #642f80 center center;
+      background: url('../img/makiguchiClass.jpg') no-repeat #642f80 center top;
       background-size: 100%;
       min-height: 100%;
       padding-top: 10%;
@@ -407,21 +416,27 @@ textarea {
       color: white; 
       font-size: 4em; 
       opacity: 1; 
-      text-shadow: 3px 4px 5px #222, 3px 12px 55px #83B8E0;
     }
     .people .rap{
       width:66%;
       margin-left: 33%;
-      background: white /* Old browsers */;
-      background: rgba(255, 255, 255, 0.7);
-      padding: .5em 1.2em;
-      border-radius: 5px 30px 5px 30px;
-
     }
     .people p{
       font-size: 1.2em;
+      text-indent: 2em; 
+    }    
+    .people p:first-child{
+      text-indent: 0;
+    }
+    .people p:first-child:first-letter{
+      float: left;
+      font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+      font-weight: bold; 
+      margin: -.1em .3em 0em 0;
+      font-size: 3em;
     }
     .whatvalue{ background:#d9dfc2; }
+    .whatvalue h3{ color:#2B2B2B; }
     .makivalue{ background:#b3b39d; padding-left: 2%; padding-right: 2%; }
     .makivalue, .isvalue{padding-top: 15%; padding-bottom: 15%;}
     .makivalue #valueSystem{ width: 100%; }
@@ -430,14 +445,38 @@ textarea {
     .makivalue .valueSystem .positive{  }
     .makivalue .valueSystem .negative{  }
     .isvalue h3{ font-size: 4em;}
-    .isvalue p{ font-size: 1.2em; text-indent: 2em;} 
+    .isvalue p{ font-size: 1.23em; text-indent: 2em; } 
     .isvalue ul{ list-style: none;}
-    .isvalue li{ margin-bottom: 1.5em; clear: both;}
+    .isvalue li{ margin-bottom: 1em; clear: both;}
     .isvalue li:last-child::first-letter{ margin-bottom: 1em; }
     .isvalue ul {padding-left: 0; }
     .makivalue h3{ font-size: 2em;}
     .makivalue h3, 
     .makivalue p{ color: #3B3B3B;}
+    .purpBorder{ padding-top: 10%; padding-bottom: 0%;min-height: 3em;width:100%; background:url('../img/rootpat.png') no-repeat left bottom; background-size: 10%;}
+    .practicalform h3 { color: white; font-size: 3.5em;}
+    .practicalform p:first-child{ margin-top:0; }
+    .practicalform p{font-size: 1.2em; text-indent: 1.5em;}
+    .practicalform{
+      padding-top: 5%;
+      padding-bottom: 5%;
+      background: url('../img/makiClassTog.jpg') no-repeat #642f80  center top;
+      background-size:100%;
+    }
+    .practicalform .transTextBox{
+      padding:1em 1.5em;
+    }
+    .practicalform p:first-child{
+      text-indent:0em;}
+    .practicalform p:first-child:first-letter{
+      float: left;
+      font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+      font-weight: bold; 
+      margin: -.1em .3em 0em 0;
+      font-size: 3em;
+
+    }
+
 ===============================================================
    Theme
    ========================================================================== */
