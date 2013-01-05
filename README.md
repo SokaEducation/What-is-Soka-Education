@@ -7,6 +7,10 @@ This project came out of a job hiring project from [Good.is](http://www.good.is)
 
 I have created a specific CFG landing page here:(http://www.cgraffiti.com/whatissokaeducation/cfg.html)
 
+## Task List
+
+Follow the Pivotal Tracker list [here](https://www.pivotaltracker.com/projects/722671/)
+
 ## In the wild
 **[WhatIsSokaEducation.com](http://www.whatissokaeducation.com) is live.**
 
