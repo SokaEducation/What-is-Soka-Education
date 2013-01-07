@@ -320,6 +320,9 @@ textarea {
     #hero{
       position:absolute;
     }
+    .practice .schools{
+      padding-top: 610px;
+    }
     .lion{
       position: absolute;
       right: 0; 
