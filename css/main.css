@@ -491,7 +491,7 @@ textarea {
    .meaning .two-col p{margin-top:0; font-size: 1.1em;}
    .meaning p {margin-top: 2em;}
    .meaning strong{  text-transform: uppercase;}
-   .meaning p{ color: #FEF7CD; text-indent: 2em; }
+   .meaning p{ color: #eee; text-indent: 2em; }
    .meaning .first p:first-child{text-indent:0em;}
     .meaning .first p:first-child:first-letter{
       float: left;
@@ -525,7 +525,8 @@ textarea {
     text-shadow: none;
     border-radius: 4px;
     margin-left: -.1em;
-      }
+  }
+
     .teacherstudent h3{
       font-size:2em;
       border-bottom: #474747 solid 1px;
