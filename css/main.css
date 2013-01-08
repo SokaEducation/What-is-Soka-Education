@@ -200,6 +200,9 @@ textarea {
    .full-width {
         width: 100%;
    }
+   .half-width {
+        max-width: 490px;
+   }
    .fr { float: right; }
    .fl { float: left; }
    .inline{ display: inline;}
@@ -214,9 +217,11 @@ textarea {
    .eight{ max-width: 66.66%; }
    .seven{ max-width: 58.33%;} 
    .six{ max-width: 50%; }
+   .six-min {min-width: 50%;}   
    .five{ max-width: 41.66% }
    .four{ max-width: 33.33%; }
-   .three{ max-width: 24.99%;}
+   .three-min{ min-width: 25%;}
+   .three{ max-width: 25%;}
    .two{ max-width: 16.66%; }
    .one{ max-width: 8.33%; }
    .column{float: left; padding: 0 15px;}
@@ -323,6 +328,68 @@ textarea {
     .practice .schools{
       padding-top: 610px;
     }
+    .schools .col-full{
+      margin-top: 30%;
+      margin-bottom: 30%;
+    }
+    .schools p{
+      font-size:1.15em;
+      border-bottom:1px dotted black;
+      border-top:1px dotted black;
+      padding-top:1.2em;
+      padding-bottom:1.2em;
+    }
+    .schools > p:first-letter,
+    p:first-letter{
+      float: left;
+      font-family: "Monotype Corsiva", "Apple Chancery", fantasy;
+      font-weight: bold; 
+      margin: -.2em .4em 0em 0;
+      font-size: 3em;
+    }
+    .schools div h3{
+      margin-top: -1em;
+    }
+    .schools h3{
+      font-size: 3em;
+    }
+    .sokaWorldKin, .sokaWorldEle, .sokaWorldHig, .sokaWorldUni{
+      height: 100%;
+    }
+    .sokaWorldKin{
+      background: #d96e32;
+      border-bottom: .5em solid #68b1a1;
+      box-shadow: -.5em 0 0 .5px #d96e32;
+      margin-left: .5em;
+      margin-right: -.5em;
+    }
+    .sokaWorldEle{
+      background: #68b1a1;
+      border-bottom: .5em solid #68b1a1;
+    }
+    .sokaWorldHig{
+      background: #6a458a;
+      border-bottom: .5em solid #6a458a;
+    }
+    .sokaWorldUni{
+      background: #104b8e;
+      border-bottom: .5em solid #6a458a;
+      box-shadow: .5em 0 0 .5px #104b8e;
+      margin-left: -.5em;
+      margin-right: .5em;
+    }
+    .institutionsWorld{
+      border-left: .5em solid #68b1a1;
+      border-right: .5em solid #6a458a;
+      box-shadow: 
+        .5em 0 0 .5px #104b8e,
+       -.5em 0 0 .5px #d96e32;
+      margin-left: .5em;
+      margin-right: .5em;
+      padding-top:30%;
+      padding-bottom:30%;
+    }
+
     .lion{
       position: absolute;
       right: 0; 
