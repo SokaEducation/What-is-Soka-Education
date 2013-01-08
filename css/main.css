@@ -356,40 +356,97 @@ textarea {
     .sokaWorldKin, .sokaWorldEle, .sokaWorldHig, .sokaWorldUni{
       height: 100%;
     }
-    .sokaWorldKin{
+    .sokaWorldKin,
+    .sokaWorldKinCont{
       background: #d96e32;
-      border-bottom: .5em solid #68b1a1;
-      box-shadow: -.5em 0 0 .5px #d96e32;
-      margin-left: .5em;
-      margin-right: -.5em;
     }
+    .sokaWorldKin{
+      border-bottom: 1em solid #68b1a1;
+      box-shadow: -1em 0 0 0 #d96e32;
+      margin-left: 1em;
+      margin-right: -1em;
+    }
+    .sokaWorldEleCont,
     .sokaWorldEle{
       background: #68b1a1;
-      border-bottom: .5em solid #68b1a1;
+    }    
+    .sokaWorldEle{
+      border-bottom: 1em solid #68b1a1;
     }
+    .sokaWorldHigCont,
     .sokaWorldHig{
-      background: #6a458a;
-      border-bottom: .5em solid #6a458a;
+      background: #6a458a;   
+      } 
+    .sokaWorldHig{
+      border-bottom: 1em solid #6a458a;
     }
+    .sokaWorldUniCont,
     .sokaWorldUni{
-      background: #104b8e;
-      border-bottom: .5em solid #6a458a;
-      box-shadow: .5em 0 0 .5px #104b8e;
-      margin-left: -.5em;
-      margin-right: .5em;
+      background: #104b8e;   
+      } 
+    .sokaWorldUni{
+      border-bottom: 1em solid #6a458a;
+      box-shadow: 1em 0 0 0 #104b8e;
+      margin-left: -1em;
+      margin-right: 1em;
     }
     .institutionsWorld{
-      border-left: .5em solid #68b1a1;
-      border-right: .5em solid #6a458a;
+      border-left: 1em solid #68b1a1;
+      border-right: 1em solid #6a458a;
       box-shadow: 
-        .5em 0 0 .5px #104b8e,
-       -.5em 0 0 .5px #d96e32;
-      margin-left: .5em;
-      margin-right: .5em;
+        1em 0 0 0 #104b8e,
+       -1em 0 0 0 #d96e32;
+      margin-left: 1em;
+      margin-right: 1em;
       padding-top:30%;
       padding-bottom:30%;
     }
-
+    /*
+    Header reset     
+     */
+    .sokaWorldKinCont h4,
+    .sokaWorldEleCont h4,
+    .sokaWorldHigCont h4,
+    .sokaWorldUniCont h4{
+      margin-top:0em;
+    }
+    .sokaWorldKinCont{
+      box-shadow: 
+        1em 0 0 0 #6a458a,
+        2em 0 0 0 #104b8e,
+        -1em 0 0 0 #d96e32;
+       border-right: 1em solid #68b1a1;
+       border-top: 1em solid #68b1a1;
+       border-bottom: 1em solid #68b1a1;
+       border-left: 1em solid #d96e32;
+       margin-right: 2em;
+       margin-left: 1em;
+    }    
+    .sokaWorldEleCont{
+      box-shadow: 
+        1em 0 0 0 #6a458a,
+        2em 0 0 0 #104b8e;
+       border-right: 1em solid #68b1a1;
+       border-left: 1em solid #d96e32;
+       margin-right: 2em;
+    }    
+    .sokaWorldHigCont{
+      box-shadow: 
+        1em 0 0 0 #6a458a,
+        2em 0 0 0 #104b8e,
+        -1em 0 0 0 #d96e32;
+       border-left: 1em solid #68b1a1;
+       margin-right: 2em;
+       margin-left: 1em;
+    }    
+    .sokaWorldUniCont{
+      box-shadow: 
+        1em 0 0 0 #6a458a,
+        2em 0 0 0 #104b8e;
+       border-left: 1em solid #68b1a1;
+       margin-right: 1em;
+       margin-left: 1em;
+    }
     .lion{
       position: absolute;
       right: 0; 
