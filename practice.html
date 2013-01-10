@@ -2,44 +2,169 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+    <!--<![endif]-->
     <head>
+        <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Soka Education - Practice in Action</title>
+        <title>
+            Soka Education - Practice in Action
+        </title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <meta name="viewport" content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <script src="js/vendor/modernizr-2.6.2.min.js" type="text/javascript">
+</script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
         <script type="text/javascript">
-          var myHighSchool = new google.maps.LatLng(42.28695,-71.23132);
-          var myHighschoolMarker = null;
+          var centerLoc = new google.maps.LatLng(12.03932, -35.15625);
+          var sapporoSokaKindergartenLoc = new google.maps.LatLng(43.06210, 141.35438);
+          var sapporoSokaKindergartenMarker = null;
+          var hongKongSokaKindergartenLoc = new google.maps.LatLng(22.33090, 114.18023);
+          var hongKongSokaKindergartenMarker = null;
+          var singaporeSokaKindergartenLoc = new google.maps.LatLng(1.35094, 103.93616);
+          var singaporeSokaKindergartenMarker = null;
+          var malaysiaSokaKindergartenLoc = new google.maps.LatLng(4.21048, 101.97577);
+          var malaysiaSokaKindergartenMarker = null;
+          var brazilSokaKindergartenLoc = new google.maps.LatLng(-23.58212, -46.62309);
+          var brazilSokaKindergartenMarker = null;
+          var sokaHappinessKindergartenLoc = new google.maps.LatLng(37.56654, 126.97797);
+          var sokaHappinessKindergartenMarker = null;
+          var tokyoSokaElementaryLoc = new google.maps.LatLng(35.68949, 139.69171);
+          var tokyoSokaElementaryMarker = null;
+          var kansaiSokaElementaryLoc = new google.maps.LatLng(34.79602, 135.63911);
+          var kansaiSokaElementaryMarker = null;
+          var brazilSokaElementaryLoc = new google.maps.LatLng(-23.58212, -46.62309);
+          var brazilSokaElementaryMarker = null;
+          var sokaJuniorSeniorHighLoc = new google.maps.LatLng(35.83293, 139.80302);
+          var sokaJuniorSeniorHighMarker = null;
+          var kansaiSokaJuniorSeniorHighLoc = new google.maps.LatLng(19.22125, 73.16714);
+          var kansaiSokaJuniorSeniorHighMarker = null;
+          var sokaUniversityLoc = new google.maps.LatLng(35.69058, 139.32733);
+          var sokaUniversityMarker = null;
+          var sokaWomensCollegeLoc = new google.maps.LatLng(35.68998, 139.32704);
+          var sokaWomensCollegeMarker = null;
+          var sokaUniversityAmericaLoc = new google.maps.LatLng(33.55440, -117.73514);
+          var sokaUniversityAmericaMarker = null;
             
             // FIRST create an info window function.
             function showMeInfo(map) {
               //FIRST Let's create a series of string variables that   
               //contain the HTML content we want displayed for each marker
 
-              var myHighSchoolString = '<p>This is where I went to High School!</p>';
+
+
+              var sapporoSokaKindergartenString = "<p>Sapporo Soka Kindergarten (Hokkaido, Japan, 1976)</p>";
+              var hongKongSokaKindergartenString = "<p>Hong Kong Soka Kindergarten (Hong Kong, China, 1992)</p>";
+              var singaporeSokaKindergartenString = "<p>Singapore Soka Kindergarten (Singapore, 1993)</p>";
+              var malaysiaSokaKindergartenString = "<p>Malaysia Soka Kindergarten (Kualo Lumpur, Malaysia, 1995)</p>";
+              var brazilSokaKindergartenString = "<p>Brazil Soka Kindergarten (San Paulo, Brazil, 2001)</p>";
+              var sokaHappinessKindergartenString = "<p>Soka Happiness Kindergarten (Seoul, South Korea, 2008)</p>";
+              var tokyoSokaElementaryString = "<p>Tokyo Soka Elementary School (Tokyo, Japan, 1978)</p>";
+              var kansaiSokaElementaryString = "<p>Kansai Soka Elementary School (Osaka, Japan, 1982)</p>";
+              var brazilSokaElementaryString = "<p>Brazil Soka Elementary School (San Paulo, Brazil, 2002)</p>";
+              var sokaJuniorSeniorHighString = "<p>Soka Junior and Senior High Schools (Tokyo, Japan, 1968)</p>";
+              var kansaiSokaJuniorSeniorHighString = "<p>Kansai Soka Junior and Senior High School (Osaka, Japan, 1973)</p>";
+              var sokaUniversityString = "<p>Soka University (Tokyo, Japan, 1971)</p>";
+              var sokaWomensCollegeString = "<p>Soka Women's College (Tokyo, Japan, 1985)</p>";
+              var sokaUniversityAmericaString = "<p>Soka University of America (Aliso Viejo, California, 1987)</p>";
 
 
              //SECOND create info window objects using the InfoWindow method
              //the content should be one of the string variables you created FIRST
-             var myHighSchoolInfoWindow = new google.maps.InfoWindow({
-                content: myHighSchoolString
-             });
 
-             //THIRD, Let’s add a click event to each of the markers so that
+             var sapporoSokaKindergartenWindow = new google.maps.InfoWindow({ 
+                content: sapporoSokaKindergartenString
+              });
+              var hongKongSokaKindergartenWindow = new google.maps.InfoWindow({ 
+                content:  hongKongSokaKindergartenString
+              });
+              var singaporeSokaKindergartenWindow = new google.maps.InfoWindow({ 
+                content:  singaporeSokaKindergartenString
+              });
+              var malaysiaSokaKindergartenWindow = new google.maps.InfoWindow({ 
+                content:  malaysiaSokaKindergartenString
+              });
+              var brazilSokaKindergartenWindow = new google.maps.InfoWindow({ 
+                content:  brazilSokaKindergartenString
+              });
+              var sokaHappinessKindergartenWindow = new google.maps.InfoWindow({ 
+                content:  sokaHappinessKindergartenString
+              });
+              var tokyoSokaElementaryWindow = new google.maps.InfoWindow({ 
+                content:  tokyoSokaElementaryString
+              });
+              var kansaiSokaElementaryWindow = new google.maps.InfoWindow({ 
+                content:  kansaiSokaElementaryString
+              });
+              var brazilSokaElementaryWindow = new google.maps.InfoWindow({ 
+                content:  brazilSokaElementaryString
+              });
+              var sokaJuniorSeniorHighWindow = new google.maps.InfoWindow({ 
+                content:  sokaJuniorSeniorHighString
+              });
+              var kansaiSokaJuniorSeniorHighWindow = new google.maps.InfoWindow({ 
+                content:  kansaiSokaJuniorSeniorHighString
+              });
+              var sokaUniversityWindow = new google.maps.InfoWindow({ 
+                content:  sokaUniversityString
+              });
+              var sokaWomensCollegeWindow = new google.maps.InfoWindow({ 
+                content:  sokaWomensCollegeString
+              });
+              var sokaUniversityAmericaWindow = new google.maps.InfoWindow({ 
+                content:  sokaUniversityAmericaString
+              });
+
+             //THIRD, Let�s add a click event to each of the markers so that
              //the info window is displayed when you click the marker
 
-              google.maps.event.addListener(myHighschoolMarker, 'click', function() {
-               myHighSchoolInfoWindow.open(map,myHighschoolMarker);
-             });
+              google.maps.event.addListener(sapporoSokaKindergartenMarker, 'click', function() {
+              sapporoSokaKindergartenWindow.open(map,sapporoSokaKindergartenMarker);
+                });
+              google.maps.event.addListener(hongKongSokaKindergartenMarker, 'click', function() {
+              hongKongSokaKindergartenWindow .open(map,hongKongSokaKindergartenMarker);
+                });
+              google.maps.event.addListener(singaporeSokaKindergartenMarker, 'click', function() {
+              singaporeSokaKindergartenWindow .open(map,singaporeSokaKindergartenMarker);
+                });
+              google.maps.event.addListener(malaysiaSokaKindergartenMarker, 'click', function() {
+              malaysiaSokaKindergartenWindow .open(map,malaysiaSokaKindergartenMarker);
+                });
+              google.maps.event.addListener(brazilSokaKindergartenMarker, 'click', function() {
+              brazilSokaKindergartenWindow .open(map,brazilSokaKindergartenMarker);
+                });
+              google.maps.event.addListener(sokaHappinessKindergartenMarker, 'click', function() {
+              sokaHappinessKindergartenWindow .open(map,sokaHappinessKindergartenMarker);
+                });
+              google.maps.event.addListener(tokyoSokaElementaryMarker, 'click', function() {
+              tokyoSokaElementaryWindow .open(map,tokyoSokaElementaryMarker);
+                });
+              google.maps.event.addListener(kansaiSokaElementaryMarker, 'click', function() {
+              kansaiSokaElementaryWindow .open(map,kansaiSokaElementaryMarker);
+                });
+              google.maps.event.addListener(brazilSokaElementaryMarker, 'click', function() {
+              brazilSokaElementaryWindow .open(map,brazilSokaElementaryMarker);
+                });
+              google.maps.event.addListener(sokaJuniorSeniorHighMarker, 'click', function() {
+              sokaJuniorSeniorHighWindow .open(map,sokaJuniorSeniorHighMarker);
+                });
+              google.maps.event.addListener(kansaiSokaJuniorSeniorHighMarker, 'click', function() {
+              kansaiSokaJuniorSeniorHighWindow .open(map,kansaiSokaJuniorSeniorHighMarker);
+                });
+              google.maps.event.addListener(sokaUniversityMarker, 'click', function() {
+              sokaUniversityWindow .open(map,sokaUniversityMarker);
+                });
+              google.maps.event.addListener(sokaWomensCollegeMarker, 'click', function() {
+              sokaWomensCollegeWindow .open(map,sokaWomensCollegeMarker);
+                });
+              google.maps.event.addListener(sokaUniversityAmericaMarker, 'click', function() {
+              sokaUniversityAmericaWindow .open(map,sokaUniversityAmericaMarker);
+                });
 
             }
 
@@ -115,8 +240,8 @@
               var mapOptions = {
                 //play around with this number as needed
                 zoom: 2,
-                //let’s center our map on one of our coordinate sets
-                center: myHighSchool,
+                //let�s center our map on one of our coordinate sets
+                center: centerLoc,
                 disableDefaultUI: true,
                 panControl: true,
                 panControlOptions: {
@@ -138,17 +263,104 @@
               var myMap = new google.maps.Map(document.getElementById('hero'),mapOptions);
 
               //THIRD we add marker objects to be displayed on the map
-              myHighschoolMarker = new google.maps.Marker(
-                {
-                  //for position we use one of our coordinate sets from above
-                  position: myHighSchool,
-                  //map should link to our map variable
-                  map: myMap,
-                  //title wont actually display anywhere
-                  title: 'Needham High School (Needham, Massachusetts)'
-                }
-               );
-
+              sapporoSokaKindergartenMarker = new google.maps.Marker(
+              {
+              position: sapporoSokaKindergartenLoc,
+              map: myMap,
+              title: "Sapporo Soka Kindergarten" 
+              }
+              );
+              hongKongSokaKindergartenMarker = new google.maps.Marker(
+              {
+              position: hongKongSokaKindergartenLoc,
+              map: myMap,
+              title: "Hong Kong Soka Kindergarten" 
+              }
+              );
+              singaporeSokaKindergartenMarker = new google.maps.Marker(
+              {
+              position: singaporeSokaKindergartenLoc,
+              map: myMap,
+              title: "Singapore Soka Kindergarten" 
+              }
+              );
+              malaysiaSokaKindergartenMarker = new google.maps.Marker(
+              {
+              position: malaysiaSokaKindergartenLoc,
+              map: myMap,
+              title: "Malaysia Soka Kindergarten" 
+              }
+              );
+              brazilSokaKindergartenMarker = new google.maps.Marker(
+              {
+              position: brazilSokaKindergartenLoc,
+              map: myMap,
+              title: "Brazil Soka Kindergarten" 
+              }
+              );
+              sokaHappinessKindergartenMarker = new google.maps.Marker(
+              {
+              position: sokaHappinessKindergartenLoc,
+              map: myMap,
+              title: "Soka Happiness Kindergarten" 
+              }
+              );
+              tokyoSokaElementaryMarker = new google.maps.Marker(
+              {
+              position: tokyoSokaElementaryLoc,
+              map: myMap,
+              title: "Tokyo Soka Elementary School" 
+              }
+              );
+              kansaiSokaElementaryMarker = new google.maps.Marker(
+              {
+              position: kansaiSokaElementaryLoc,
+              map: myMap,
+              title: "Kansai Soka Elementary School" 
+              }
+              );
+              brazilSokaElementaryMarker = new google.maps.Marker(
+              {
+              position: brazilSokaElementaryLoc,
+              map: myMap,
+              title: "Brazil Soka Elementary School" 
+              }
+              );
+              sokaJuniorSeniorHighMarker = new google.maps.Marker(
+              {
+              position: sokaJuniorSeniorHighLoc,
+              map: myMap,
+              title: "Soka Junior and Senior High School" 
+              }
+              );
+              kansaiSokaJuniorSeniorHighMarker = new google.maps.Marker(
+              {
+              position: kansaiSokaJuniorSeniorHighLoc,
+              map: myMap,
+              title: "Kansai Soka Junior and Senior High School" 
+              }
+              );
+              sokaUniversityMarker = new google.maps.Marker(
+              {
+              position: sokaUniversityLoc,
+              map: myMap,
+              title: "Soka University" 
+              }
+              );
+              sokaWomensCollegeMarker = new google.maps.Marker(
+              {
+              position: sokaWomensCollegeLoc,
+              map: myMap,
+              title: "Soka Women's College" 
+              }
+              );
+              sokaUniversityAmericaMarker = new google.maps.Marker(
+              {
+              position: sokaUniversityAmericaLoc,
+              map: myMap,
+              title: "Soka University of America" 
+              }
+              );
 
               showMeInfo(myMap);
 
@@ -159,216 +371,343 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
         <!-- Add your site or application content here -->
         <div class="wrapper">
             <div class="header">
-                
                 <div class="top">
-                    <h1><a class="logo" href="http://whatissokaeducation.com"><img src="img/presprite-headerlogo.png" alt="What Is Soka Education Logo"></a></h1>
-
+                    <h1>
+                        <a class="logo" href="http://whatissokaeducation.com"><img src="img/presprite-headerlogo.png" alt="What Is Soka Education Logo"></a>
+                    </h1>
                     <ul class="nav" id="navigation">
-                        <li><a href="/index.html">Overview</a></li>
-                        <!-- <li><a href="#">Meaning</a></li> -->
-                        <li><a href="/roots.html">Roots</a></li>
-                        <!-- <li><a href="#">Context</a></li> -->
-                        <li><a href="/practice.html">Practice</a></li>
-                    </ul>
-
-                   <!-- <a href="#" class="getinvolved">Get Involved <b>></b></a> -->
+                        <li>
+                            <a href="/index.html">Overview</a>
+                        </li><!-- <li><a href="#">Meaning</a></li> -->
+                        <li>
+                            <a href="/roots.html">Roots</a>
+                        </li><!-- <li><a href="#">Context</a></li> -->
+                        <li>
+                            <a href="/practice.html">Practice</a>
+                        </li>
+                    </ul><!-- <a href="#" class="getinvolved">Get Involved <b>></b></a> -->
                 </div>
             </div>
             <div class="content">
                 <div class="Grad">
-                    <div id="hero" class="Grad">
-                     
+                    <div id="hero" class="Grad"></div>
+                    <div class="cue col-full">
+                        <div class="floatwrapper">
+                            <h1>
+                                <b>Soka<br>
+                                Institutions</b>
+                            </h1>
+                            <h2>
+                                Around the world
+                            </h2>
+                        </div>
                     </div>
-                     <div class="cue col-full">
-                          <div class="floatwrapper">
-                              <h1> 
-                              <b>Soka<br>Institutions    </b></h1>
-                              <h2>Around the world</h2>
-                          </div>
-                      </div>
                 </div>
                 <div class="schools">
                     <div class="text-center col-full">
-                        
-                        <h3>Soka Schools</h3>
-                        
-                        <p class="text-left">Realizing the shared dream of his mentors, Tsunesaburo Makiguchi and Josei Toda, SUA Founder Daisaku Ikeda has established many schools in various parts of the world over the past four decades.</p>
-                        <!-- <a href="#">Schools</a> </div> -->
-                    </div>    
+                        <h3>
+                            Soka Schools
+                        </h3>
+                        <p class="text-left">
+                            Realizing the shared dream of his mentors, Tsunesaburo Makiguchi and Josei Toda, SUA Founder Daisaku Ikeda has established many schools in various parts of the world over the past four decades.
+                        </p><!-- <a href="#">Schools</a> </div> -->
+                    </div>
                 </div>
-                 <div class="sokaWorldKin three-min three column ">
+                <div class="sokaWorldKin three-min three column">
                     <div class="quar-width fl">
-                      <h4>Kindergartens</h4>
+                        <h4>
+                            Kindergartens
+                        </h4>
                     </div>
-                  </div>
-                  <div class="sokaWorldEle three-min three column ">
+                </div>
+                <div class="sokaWorldEle three-min three column">
                     <div class="quar-width fl">
-                      <h4>Elementary Schools</h4>
+                        <h4>
+                            Elementary Schools
+                        </h4>
                     </div>
-                  </div>                 
-                  <div class="sokaWorldHig three-min three column ">
+                </div>
+                <div class="sokaWorldHig three-min three column">
                     <div class="quar-width fl">
-                      <h4>Junior & Senior Highschools</h4>
+                        <h4>
+                            Junior &amp; Senior Highschools
+                        </h4>
                     </div>
-                  </div>
-                  <div class="sokaWorldUni three-min three column ">
+                </div>
+                <div class="sokaWorldUni three-min three column">
                     <div class="quar-width fl">
-                      <h4>Universities</h4>
+                        <h4>
+                            Universities
+                        </h4>
                     </div>
-                  </div>
-                  <div class="institutionsWorld">
+                </div>
+                <div class="institutionsWorld">
                     <div class="col-full">
-                      <!--  <a href="#">Institutions</a> -->
-                      <h3>Soka Institutions around the world</h3>
-                      <p>The Soka institutions are all based on the philosophy of creating value, and strive to apply Soka education in a way that reflects the cultural and societal contexts of their respective locations.</p>
-                           
-                     <!--   <a href="#">Institutions</a> -->
+                        <!--  <a href="#">Institutions</a> -->
+                        <h3>
+                            Soka Institutions around the world
+                        </h3>
+                        <p>
+                            The Soka institutions are all based on the philosophy of creating value, and strive to apply Soka education in a way that reflects the cultural and societal contexts of their respective locations.
+                        </p><!--   <a href="#">Institutions</a> -->
                     </div>
-                  </div>
-                  <div class="sokaWorldKinCont twelve">
+                </div>
+                <div class="sokaWorldKinCont twelve">
                     <div class="col-full">
-                      <h4>Kindergartens</h4>
-                      <dl>
-                        <dt>Sapporo Soka Kindergarten</dt>
-                        <dd>(Hokkaido, Japan (1976)</dd>
-                        <dt>Hong Kong Soka Kindergarten</dt>
-                        <dd>(Hong Kong, China, 1992)</dd>
-                        <dt>Singapore Soka Kindergarten</dt>
-                        <dd>(Singapore, 1993)</dd>
-                        <dt>Malaysia Soka Kindergarten</dt>
-                        <dd>(Kuala Lumpur, Malaysia, 1995)</dd>
-                        <dt>Brazil Soka Kindergarten</dt>
-                        <dd>(São Paulo, Brazil, 2001)</dd>
-                        <dt>Soka Happiness Kindergarten</dt>
-                        <dd>(Seoul, South Korea, 2008)</dd>
-                       </dl> 
+                        <h4>
+                            Kindergartens
+                        </h4>
+                        <dl>
+                            <dt>
+                                Sapporo Soka Kindergarten
+                            </dt>
+                            <dd>
+                                (Hokkaido, Japan (1976)
+                            </dd>
+                            <dt>
+                                Hong Kong Soka Kindergarten
+                            </dt>
+                            <dd>
+                                (Hong Kong, China, 1992)
+                            </dd>
+                            <dt>
+                                Singapore Soka Kindergarten
+                            </dt>
+                            <dd>
+                                (Singapore, 1993)
+                            </dd>
+                            <dt>
+                                Malaysia Soka Kindergarten
+                            </dt>
+                            <dd>
+                                (Kuala Lumpur, Malaysia, 1995)
+                            </dd>
+                            <dt>
+                                Brazil Soka Kindergarten
+                            </dt>
+                            <dd>
+                                (S&#195;&#163;o Paulo, Brazil, 2001)
+                            </dd>
+                            <dt>
+                                Soka Happiness Kindergarten
+                            </dt>
+                            <dd>
+                                (Seoul, South Korea, 2008)
+                            </dd>
+                        </dl>
                     </div>
-                  </div>
-                  <div class="sokaWorldEleCont twelve">
+                </div>
+                <div class="sokaWorldEleCont twelve">
                     <div class="col-full">
-                      <h4>Elementary Schools</h4>
-                      <dd>
-                        <dt>Tokyo Soka Elementary School</dt>
-                        <dd>(Tokyo, Japan, 1978)</dd>
-                        <dt>Kansai Soka Elementary School</dt>
-                        <dd>(Osaka, Japan, 1982)</dd>
-                        <dt>Brazil Soka Elementary School</dt>
-                        <dd>(São Paulo, Brazil, 2002)</dd>
-                      </dd>
+                        <h4>
+                            Elementary Schools
+                        </h4>
+                        <dl>
+                            <dt>
+                                Tokyo Soka Elementary School
+                            </dt>
+                            <dd>
+                                (Tokyo, Japan, 1978)
+                            </dd>
+                            <dt>
+                                Kansai Soka Elementary School
+                            </dt>
+                            <dd>
+                                (Osaka, Japan, 1982)
+                            </dd>
+                            <dt>
+                                Brazil Soka Elementary School
+                            </dt>
+                            <dd>
+                                (S&#195;&#163;o Paulo, Brazil, 2002)
+                            </dd>
+                        </dl>
                     </div>
-                  </div>                 
-                  <div class="sokaWorldHigCont twelve">
+                </div>
+                <div class="sokaWorldHigCont twelve">
                     <div class="col-full">
-                      <h4>Junior & Senior Highschools</h4>
-                      <dl>
-                        <dt>Soka Junior and Senior High Schools</dt>
-                        <dd>(Tokyo, Japan, 1968)</dd>
-                        <dt>Kansai Soka Junior and Senior High Schools</dt>
-                        <dd>(Osaka, Japan, 1973)</dd>
-                      </dl>
+                        <h4>
+                            Junior &amp; Senior Highschools
+                        </h4>
+                        <dl>
+                            <dt>
+                                Soka Junior and Senior High Schools
+                            </dt>
+                            <dd>
+                                (Tokyo, Japan, 1968)
+                            </dd>
+                            <dt>
+                                Kansai Soka Junior and Senior High Schools
+                            </dt>
+                            <dd>
+                                (Osaka, Japan, 1973)
+                            </dd>
+                        </dl>
                     </div>
-                  </div>
-                  <div class="sokaWorldUniCont">
+                </div>
+                <div class="sokaWorldUniCont">
                     <div class="col-full">
-                      <h4>Universities</h4>
-                      <dl>
-                        <dt>Soka University</dt>
-                        <dd>(Tokyo, Japan, 1971)</dd>
-                        <dt>Soka Women's College</dt>
-                        <dd>(Tokyo, Japan, 1985)</dd>
-                        <dt>Soka University of America</dt>
-                        <dd>(Aliso Viejo, California, 1987)</dd>
-                      </dl>
+                        <h4>
+                            Universities
+                        </h4>
+                        <dl>
+                            <dt>
+                                Soka University
+                            </dt>
+                            <dd>
+                                (Tokyo, Japan, 1971)
+                            </dd>
+                            <dt>
+                                Soka Women's College
+                            </dt>
+                            <dd>
+                                (Tokyo, Japan, 1985)
+                            </dd>
+                            <dt>
+                                Soka University of America
+                            </dt>
+                            <dd>
+                                (Aliso Viejo, California, 1987)
+                            </dd>
+                        </dl>
                     </div>
-                  </div>
-                  
+                </div>
                 <div class="singaporeSoka">
                     <div class="col-full">
-                    <h3>Singapore Soka Kindergarten</h3>
-                    <p>The kindergarten offers a unique program for students to apply an experience-based approach to learning, which is a core principle of Soka education.</p>
-                    <p>The “Soka Kindergarten Post Office” allows the children at Singapore Soka to apply for jobs, discuss job requirements with their teachers, attend on-the-job training, and then take on their daily tasks of sorting and distributing the mail to the students in each class.  The children are encouraged to communicate with each other by letters or picture messages.</p>
+                        <h3>
+                            Singapore Soka Kindergarten
+                        </h3>
+                        <p>
+                            The kindergarten offers a unique program for students to apply an experience-based approach to learning, which is a core principle of Soka education.
+                        </p>
+                        <p>
+                            The &#226;&#8364;&#339;Soka Kindergarten Post Office&#226;&#8364; allows the children at Singapore Soka to apply for jobs, discuss job requirements with their teachers, attend on-the-job training, and then take on their daily tasks of sorting and distributing the mail to the students in each class. The children are encouraged to communicate with each other by letters or picture messages.
+                        </p>
                     </div>
                 </div>
                 <div class="sapporoSoka">
                     <div class="col-full">
-                     <h3>Sapporo Soka Kindergarten</h3>
-                      <p>With over 30 years of history, the Sapporo Soka Kindergarten has developed many unique programs that put into practice the theories of Soka education.</p>
-                      <h4>Rhythmic Classes:</h4>
-                      <p>The school offers rhythmic classes to develop the students’ abilities to express themselves through music and help them develop independence through interaction with teachers, friends and nature.</p>
-                      <h4>Sister School Exchanges:</h4>
-                      <p>The kindergarten also holds various programs to foster exchange among its sister Soka schools, such as meeting with visiting junior and senior high school students and holding gift exchanges.</p>
+                        <h3>
+                            Sapporo Soka Kindergarten
+                        </h3>
+                        <p>
+                            With over 30 years of history, the Sapporo Soka Kindergarten has developed many unique programs that put into practice the theories of Soka education.
+                        </p>
+                        <h4>
+                            Rhythmic Classes:
+                        </h4>
+                        <p>
+                            The school offers rhythmic classes to develop the students&#226;&#8364;&#8482; abilities to express themselves through music and help them develop independence through interaction with teachers, friends and nature.
+                        </p>
+                        <h4>
+                            Sister School Exchanges:
+                        </h4>
+                        <p>
+                            The kindergarten also holds various programs to foster exchange among its sister Soka schools, such as meeting with visiting junior and senior high school students and holding gift exchanges.
+                        </p>
                     </div>
                 </div>
                 <div class="brazilSoka">
                     <div class="col-full">
-                      <h3>Brazil Soka Kindergarten Elementary & Junior High Schools</h3>
-                      <p>At Brazil Soka Schools, teachers emphasize the importance of one’s connection with nature through gardening. Students tend to a garden with fruits and vegetables and aim to produce food for their own consumption.</p>
+                        <h3>
+                            Brazil Soka Kindergarten Elementary &amp; Junior High Schools
+                        </h3>
+                        <p>
+                            At Brazil Soka Schools, teachers emphasize the importance of one&#226;&#8364;&#8482;s connection with nature through gardening. Students tend to a garden with fruits and vegetables and aim to produce food for their own consumption.
+                        </p>
                     </div>
                 </div>
                 <div class="kansaihigh">
                     <div class="col-full">
-                        <h3>Tokyo & Kansai Junior High High Schools</h3>
-                        <p>The Tokyo and Kansai Junior High and High Schools were the first Soka schools to be founded in the world and represent the beginning of the development of the Soka School system.</p>
-                        <p>Tokyo Soka Jr. High and High School started off as boys’ schools in 1968. Kansai Soka Jr. High and High School started off as girls’ schools in 1973.</p>
-                        <h4>Unique Programs:</h4>
+                        <h3>
+                            Tokyo &amp; Kansai Junior High High Schools
+                        </h3>
+                        <p>
+                            The Tokyo and Kansai Junior High and High Schools were the first Soka schools to be founded in the world and represent the beginning of the development of the Soka School system.
+                        </p>
+                        <p>
+                            Tokyo Soka Jr. High and High School started off as boys&#226;&#8364;&#8482; schools in 1968. Kansai Soka Jr. High and High School started off as girls&#226;&#8364;&#8482; schools in 1973.
+                        </p>
+                        <h4>
+                            Unique Programs:
+                        </h4>
                         <ul>
-                          <li>Students participate in International Philosophical Olympiad</li>
-                          <li>Kansai junior high and high school students participate in National Aeronautics and Space Administration (NASA)’s educational program “EarthKAM”</li>
-                          <li>Mandatory intensive Test of English as a Foreign Language (TOEFL) course for high school seniors</li>
-                        </ul> 
+                            <li>Students participate in International Philosophical Olympiad
+                            </li>
+                            <li>Kansai junior high and high school students participate in National Aeronautics and Space Administration (NASA)&#226;&#8364;&#8482;s educational program &#226;&#8364;&#339;EarthKAM&#226;&#8364;
+                            </li>
+                            <li>Mandatory intensive Test of English as a Foreign Language (TOEFL) course for high school seniors
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="sokaWomen">
                     <div class="col-full">
-                    <h3>Soka Women’s College</h3>
-                      <p>A two-year college which offers two majors: English Communication and Modern Business</p>
-                      <p>Over 2500 students have participated in the study abroad program to SUA in order to study English in an immersion setting and to foster an international perspective.</p>
+                        <h3>
+                            Soka Women&#226;&#8364;&#8482;s College
+                        </h3>
+                        <p>
+                            A two-year college which offers two majors: English Communication and Modern Business
+                        </p>
+                        <p>
+                            Over 2500 students have participated in the study abroad program to SUA in order to study English in an immersion setting and to foster an international perspective.
+                        </p>
                     </div>
                 </div>
                 <div class="sokaUniversity">
                     <div class="col-full">
-                       <h3>Soka University</h3>
-                        <p>Conducts exchange agreements with 104 universities in 44 countries and regions</p>
-                        <p>There are over 8000 undergraduate and graduate students who attend Soka University of Japan.</p>
-                        <h4>Majors Offered:</h4>
+                        <h3>
+                            Soka University
+                        </h3>
+                        <p>
+                            Conducts exchange agreements with 104 universities in 44 countries and regions
+                        </p>
+                        <p>
+                            There are over 8000 undergraduate and graduate students who attend Soka University of Japan.
+                        </p>
+                        <h4>
+                            Majors Offered:
+                        </h4>
                         <ul>
-                          <li>Economics</li>
-                          <li>Law</li>
-                          <li>Human Studies</li>
-                          <li>Business Administration</li>
-                          <li>Education</li>
-                          <li>Engineering </li>
+                            <li>Economics
+                            </li>
+                            <li>Law
+                            </li>
+                            <li>Human Studies
+                            </li>
+                            <li>Business Administration
+                            </li>
+                            <li>Education
+                            </li>
+                            <li>Engineering
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="content col-full"></div>
-            
-        </div>
+        </div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript">
+</script><script type="text/javascript">
+window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')
+        </script><script src="js/plugins.js" type="text/javascript">
+</script><script src="js/main.js" type="text/javascript">
+</script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script type="text/javascript">
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37388826-1']);
+        _gaq.push(['_setDomainName', 'whatissokaeducation.com']);
+        _gaq.push(['_trackPageview']);
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script type="text/javascript">
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-37388826-1']);
-  _gaq.push(['_setDomainName', 'whatissokaeducation.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+        </script>
     </body>
 </html>

@@ -391,13 +391,11 @@ textarea {
       margin-right: 1em;
     }
     .institutionsWorld{
-      border-left: 1em solid #68b1a1;
-      border-right: 1em solid #6a458a;
+      border-left: 1em solid #6a458a;
       box-shadow: 
         1em 0 0 0 #104b8e,
        -1em 0 0 0 #d96e32;
       margin-left: 1em;
-      margin-right: 1em;
       padding-top:30%;
       padding-bottom:30%;
     }
